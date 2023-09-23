@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>open ddnet client</title>
+</head>
+<body>
+    <script>
+        document.addEventListener(
+            'DOMContentLoaded',
+            () => {
+                const params = new URLSearchParams(window.location.search);
+                if (params.has('addr')) {
+                    window.location = `ddnet://${params.get('addr')}`;
+                }
+            }
+        );
+    </script>
+</body>
+</html>
